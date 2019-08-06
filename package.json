@@ -1,0 +1,42 @@
+{
+  "name": "develop-for-gecko",
+  "description": "So you want to work for gecko.",
+  "version": "5.3.0",
+  "repository": "https://bitbucket.org/geckodesigns/gecko-skeleton.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "fibers": "^4.0.1",
+    "file-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.22.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
+  },
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "build:sample": "webpack --config webpack.sample.config.js --mode=production",
+    "dev:sample": "webpack --watch --config webpack.sample.config.js --mode=development"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  }
+}
