@@ -74,12 +74,25 @@ a {
   background: #1ea575;
 }
 
-fieldset {
+form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2.5rem;
   border: none;
   padding: 0px;
+}
+form button {
+  padding: 1rem 2rem;
+  background-color: #1ea575;
+  transition: background 0.2s ease-in-out;
+  font-size: 21.6px;
+  width: 100%;
+  grid-column: span 2;
+  color: #eee;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2rem;
 }
 
 .gecko-input {
@@ -103,6 +116,7 @@ fieldset {
 
 .gecko_sign-up_password {
   display: flex;
+  grid-column: span 2;
   text-align: right;
   font-size: 0.9rem;
   margin: 0.5rem;
@@ -111,20 +125,6 @@ fieldset {
   align-items: center;
   text-decoration: none;
   color: #1ea575;
-}
-
-form button {
-  padding: 1rem 2rem;
-  background-color: #1ea575;
-  transition: background 0.2s ease-in-out;
-  font-size: 21.6px;
-  width: 100%;
-  grid-column: span 2;
-  color: #eee;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 2rem;
 }
 
 h1 {
