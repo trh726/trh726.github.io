@@ -36,6 +36,13 @@ export default class Products extends React.PureComponent {
 				<Helmet>
 					<title>Develop With Gecko | View Our Products</title>
 					<meta name="View all our products." content="Nested component" />
+					<script type="application/ld+json">{`
+								{
+									"@context": "http://schema.org",
+									"@type": "WebSite",
+									"url": "https://trh726.github.io",
+								}
+					`}</script>
 				</Helmet>
 				<h1 className="gecko_products_header">Hi, { this.props.user }! View Our Products</h1>				
 				<section className='gecko_products' itemScope itemType="http://schema.org/ItemList">

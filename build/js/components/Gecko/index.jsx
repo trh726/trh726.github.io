@@ -29,7 +29,6 @@ export default class Gecko extends React.Component {
 		})
 	}
 	render() {
-		console.log(this.state);
 		return (
 			<React.Fragment>			
 				{!this.state.login && this.state.view === 'signup' &&
