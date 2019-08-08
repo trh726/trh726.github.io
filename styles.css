@@ -12,7 +12,7 @@ html, body, span, div {
 
 body {
   font-family: "Exo", sans-serif;
-  font-size: 0.1875in;
+  font-size: 18px;
   background-color: #eee;
 }
 
@@ -32,8 +32,8 @@ a {
 }
 
 .gecko_sign-up {
-  box-shadow: 0 3px 0.125in rgba(28, 37, 46, 0.25);
-  border-radius: 0.041666667in;
+  box-shadow: 0 3px 0.12px rgba(28, 37, 46, 0.05);
+  border-radius: 4px;
   background: #1c252e;
   max-width: calc(100% - 20px);
   width: 34rem;
@@ -81,21 +81,21 @@ a {
 }
 .gecko_sign-up form input {
   grid-column: span 2;
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   background: transparent;
   outline: none;
   font-size: 18px;
   margin-top: 2.5rem;
   padding: 8px;
   width: calc(100% - 1rem);
-  color: #eeeeee;
+  color: #eee;
 }
 .gecko_sign-up form input.small {
   grid-column: span 1;
 }
 .gecko_sign-up form input::placeholder {
   font-family: "Exo", sans-serif;
-  color: #eeeeee;
+  color: #eee;
 }
 .gecko_sign-up form button {
   padding: 1rem 2rem;
@@ -139,11 +139,11 @@ a {
 .gecko_product {
   border-radius: 3pt;
   overflow: hidden;
-  box-shadow: 0 2.25pt 0.75pc rgba(28, 37, 46, 0.05);
+  box-shadow: 0 3px 12px rgba(28, 37, 46, 0.05);
   background-color: #fff;
 }
 .gecko_product:hover {
-  box-shadow: 0 0.125pc 12pt rgba(28, 37, 46, 0.1);
+  box-shadow: 0 2px 16px rgba(28, 37, 46, 0.1);
 }
 .gecko_product picture {
   display: block;
@@ -191,7 +191,7 @@ a {
   transition: all 0.1s ease-in-out;
   box-shadow: 0 0 0 2px #1ea575;
   color: #1ea575;
-  border-radius: 0.0625in;
+  border-radius: 6px;
   font-size: 1.2rem;
   padding: 0.6rem 1.5rem;
   cursor: pointer;
