@@ -37,6 +37,15 @@ export default class Gecko extends React.Component {
 						<Helmet>
 							<title>Develop With Gecko | Sign Up</title>
 							<meta name="Sign up to develop with Gecko" content="Nested component" />
+							<meta itemscope itemtype="http://schema.org/WebSite" />
+							<link itemprop="url" href="http://www.example.com/"/>
+							<script type="application/ld+json">{`
+								{
+									"@context": "http://schema.org",
+									"@type": "WebSite",
+									"url": "https://trh726.github.io",
+								}
+							`}</script>
 						</Helmet>
 						<SignUp title="Sign Up for Free" view={this.state.view} login={() => this.handleLogin(event)} changeView={() => this.viewLogin()}>
 							<SignUpFields />

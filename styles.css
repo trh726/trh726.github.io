@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:300,400,500i,700&display=swap);
+#root {
+  min-height: 100%;
+  margin: 2.5rem;
+}
+
 html, body, span, div {
   font-family: "Exo", sans-serif;
   margin: 0;
@@ -6,38 +11,13 @@ html, body, span, div {
 }
 
 body {
+  font-family: "Exo", sans-serif;
   font-size: 0.1875in;
   background-color: #eee;
 }
 
-#root {
-  min-height: 100%;
-  margin: 2.5rem;
-}
-
-.gecko_sign-up {
-  box-shadow: 0 3px 0.125in rgba(28, 37, 46, 0.25);
-  border-radius: 0.041666667in;
-  background: #1c252e;
-  max-width: calc(100% - 20px);
-  width: 34rem;
-  margin: auto;
-  padding: 2.5rem;
-}
-
-.gecko_sign-up_title {
-  text-align: center;
-  font-size: 23.85px;
-  margin-bottom: 2.5rem;
-}
-
-.gecko_sign-up__form-toggle {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2.5rem;
+h1 {
+  color: #eee;
 }
 
 button {
@@ -51,7 +31,29 @@ a {
   text-decoration: none;
 }
 
-.gecko_sign-up__form-toggle button {
+.gecko_sign-up {
+  box-shadow: 0 3px 0.125in rgba(28, 37, 46, 0.25);
+  border-radius: 0.041666667in;
+  background: #1c252e;
+  max-width: calc(100% - 20px);
+  width: 34rem;
+  margin: auto;
+  padding: 2.5rem;
+}
+.gecko_sign-up h1 {
+  text-align: center;
+  font-size: 23.85px;
+}
+.gecko_sign-up section {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.gecko_sign-up button {
+  width: 100%;
+  margin-bottom: 2.5rem;
   padding: 1rem 2rem;
   background-color: #344048;
   transition: background 0.2s ease-in-out;
@@ -60,28 +62,42 @@ a {
   color: #eee;
   cursor: pointer;
 }
-
-.gecko_sign-up__form-toggle button:hover {
+.gecko_sign-up button:hover {
   background-color: #1a8f66;
 }
-
-.gecko_sign-up__form-toggle button:disabled {
+.gecko_sign-up button:disabled {
   background: #1ea575;
   cursor: default;
 }
-
-.gecko_sign-up__form-toggle button:disabled:hover {
+.gecko_sign-up button:disabled:hover {
   background: #1ea575;
 }
-
-form {
+.gecko_sign-up form {
   display: grid;
+  grid-column-gap: 2.5rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2.5rem;
   border: none;
   padding: 0px;
 }
-form button {
+.gecko_sign-up form input {
+  grid-column: span 2;
+  border: 1px solid #eeeeee;
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  margin-top: 2.5rem;
+  padding: 8px;
+  width: calc(100% - 1rem);
+  color: #eeeeee;
+}
+.gecko_sign-up form input.small {
+  grid-column: span 1;
+}
+.gecko_sign-up form input::placeholder {
+  font-family: "Exo", sans-serif;
+  color: #eeeeee;
+}
+.gecko_sign-up form button {
   padding: 1rem 2rem;
   background-color: #1ea575;
   transition: background 0.2s ease-in-out;
@@ -92,31 +108,10 @@ form button {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
-
-.gecko-input {
-  grid-column: span 2;
-  border: 1px solid #eeeeee;
-  background: transparent;
-  outline: none;
-  font-size: 18px;
-  padding: 8px;
-  width: calc(100% - 1rem);
-  color: #eeeeee;
-}
-
-.gecko-input::placeholder {
-  color: #eeeeee;
-}
-
-.gecko-input.small {
-  grid-column: span 1;
-}
-
-.gecko_sign-up_password {
+.gecko_sign-up form a {
   display: flex;
-  grid-column: span 2;
   text-align: right;
   font-size: 0.9rem;
   margin: 0.5rem;
@@ -125,14 +120,7 @@ form button {
   align-items: center;
   text-decoration: none;
   color: #1ea575;
-}
-
-h1 {
-  color: #eee;
-}
-
-input::placeholder {
-  font-family: "Exo", sans-serif;
+  grid-column: span 2;
 }
 
 .gecko_products_header {
@@ -157,13 +145,11 @@ input::placeholder {
 .gecko_product:hover {
   box-shadow: 0 0.125pc 12pt rgba(28, 37, 46, 0.1);
 }
-
-picture {
+.gecko_product picture {
   display: block;
   overflow: hidden;
 }
-
-img {
+.gecko_product picture img {
   display: block;
   object-fit: cover;
   object-position: center;
@@ -172,11 +158,10 @@ img {
   transition: all 0.5s ease-in-out;
   transform-origin: bottom center;
 }
-img:hover {
+.gecko_product picture img:hover {
   transform: scale(1.05);
 }
-
-.gecko_product_details {
+.gecko_product .gecko_product_details {
   background-color: #fff;
   padding: 1.5rem 1rem;
   display: flex;
@@ -184,17 +169,17 @@ img:hover {
   justify-content: center;
   align-items: center;
 }
-.gecko_product_details h3 {
+.gecko_product .gecko_product_details h3 {
   color: #1c252e;
   font-weight: bold;
   font-size: 1.4rem;
   text-align: center;
   margin: 0;
 }
-.gecko_product_details h3:hover {
+.gecko_product .gecko_product_details h3:hover {
   text-decoration: underline;
 }
-.gecko_product_details p {
+.gecko_product .gecko_product_details p {
   text-align: center;
   margin: 0;
   color: #999;
@@ -202,7 +187,7 @@ img:hover {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-.gecko_product_details button {
+.gecko_product .gecko_product_details button {
   transition: all 0.1s ease-in-out;
   box-shadow: 0 0 0 2px #1ea575;
   color: #1ea575;
@@ -212,6 +197,6 @@ img:hover {
   cursor: pointer;
   background-color: transparent;
 }
-.gecko_product_details button:hover {
+.gecko_product .gecko_product_details button:hover {
   background-color: rgba(30, 165, 117, 0.1);
 }

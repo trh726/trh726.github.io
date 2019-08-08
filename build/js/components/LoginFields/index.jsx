@@ -3,15 +3,12 @@ import React from 'react';
 export default class LoginFields extends React.Component {
 
 	render() {
-		const onClick = () => {
-			alert('You actually wanna get started?');
-			this.props.login();
-		}
+		
 		return (
-			<React.Fragment>
-					<input required className="gecko-input" type="email"  name="email" placeholder="Email Address*" />
-					<input required className="gecko-input" type="password" name="password" placeholder="Password*" />
-				<a className="gecko_sign-up_password" href="#">Forgot Password?</a>
+			<React.Fragment>				              
+				<input required type="email"  name="email" placeholder="Email Address*" />
+				<input required type="password" name="password" placeholder="Password*" />
+				<a href="#">Forgot Password?</a>
 			</React.Fragment>
 		);
 	}

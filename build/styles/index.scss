@@ -1,6 +1,12 @@
 // Styles
 @import url('https://fonts.googleapis.com/css?family=Exo:300,400,500i,700&display=swap');
 $font: 'Exo', sans-serif;
+
+#root {
+	min-height: 100%;
+	margin: 2.5rem;
+}
+
 html, body, span, div {
 	font-family: $font;
 	margin: 0;
@@ -8,38 +14,13 @@ html, body, span, div {
 }
 
 body {
+	font-family: $font;
 	font-size: .1875in;
 	background-color: #eee;
 }
 
-#root {
-	min-height: 100%;
-	margin: 2.5rem;
-}
-
-.gecko_sign-up {
-	box-shadow: 0 3px .125in rgba(28,37,46,.25);
-	border-radius: .041666667in;
-	background: #1c252e;
-	max-width: calc(100% - 20px);
-	width: 34rem;
-	margin: auto;
-	padding: 2.5rem;
-}
-
-.gecko_sign-up_title {
-	text-align: center;
-	font-size: 23.85px;
-	margin-bottom: 2.5rem;
-}
-
-.gecko_sign-up__form-toggle {
-	width: 100%;
-	display:flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 2.5rem;
+h1 {
+	color: #eee;
 }
 
 button {
@@ -53,89 +34,109 @@ a {
 	text-decoration: none;
 }
 
-.gecko_sign-up__form-toggle button {
-	padding: 1rem 2rem;
-	background-color: #344048;
-	transition: background .2s ease-in-out;
-	font-size: 18px;
-	width: 100%;
-	color: #eee;
-	cursor: pointer;
-}
+.gecko_sign-up {
+	box-shadow: 0 3px .125in rgba(28,37,46,.25);
+	border-radius: .041666667in;
+	background: #1c252e;
+	max-width: calc(100% - 20px);
+	width: 34rem;
+	margin: auto;
+	padding: 2.5rem;
 
-.gecko_sign-up__form-toggle button:hover {
-	background-color: #1a8f66;
-}
+	& h1 {
+		text-align: center;
+	font-size: 23.85px;
+	}
 
-.gecko_sign-up__form-toggle button:disabled{
-	background: rgb(30, 165, 117);
-	cursor: default;
-}
-
-.gecko_sign-up__form-toggle button:disabled:hover{
-	background: rgb(30, 165, 117);
-}
-
-form {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 2.5rem;
-	border: none;
-	padding: 0px;
+	& section {
+		width: 100%;
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
 
 	& button {
-		padding: 1rem 2rem;
-		background-color: rgb(30, 165, 117);
-		transition: background .2s ease-in-out;
-		font-size: 21.6px;
 		width: 100%;
-		grid-column: span 2;
+		margin-bottom: 2.5rem;
+		padding: 1rem 2rem;
+		background-color: #344048;
+		transition: background .2s ease-in-out;
+		font-size: 18px;
+		width: 100%;
 		color: #eee;
 		cursor: pointer;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		margin-top: 2rem;
+		
+		&:hover {
+			background-color: #1a8f66;
+		}
+
+		&:disabled {
+			background: rgb(30, 165, 117);
+			cursor: default;
+
+			&:hover {
+				background: rgb(30, 165, 117);
+			}
+		}
+
 	}
-}
-
-.gecko-input{
-	grid-column: span 2;
-	border: 1px solid rgb(238, 238, 238);
-	background: transparent;
-	outline: none;
-	font-size: 18px;
-	padding: 8px;
-	width: calc(100% - 1rem);
-	color: rgb(238, 238, 238);
-}
-
-.gecko-input::placeholder {
-	color: rgb(238, 238, 238);
-}
-
-.gecko-input.small{
-	grid-column: span 1;
-}
-
-.gecko_sign-up_password{
-	display:flex;
-	grid-column: span 2;
-	text-align: right;
-	font-size: .9rem;
-	margin: .5rem;
-	margin-bottom: -1rem;
-	justify-content: flex-end;
-	align-items: center;
-	text-decoration: none;
-	color: rgb(30, 165, 117);
-}
-
-h1 {
-	color: #eee;
-}
-
-input::placeholder {
-	font-family: $font;
+	& form {
+		display: grid;
+		grid-column-gap: 2.5rem;
+		grid-template-columns: repeat(2, 1fr);
+		border: none;
+		padding: 0px;
+	
+		& input{
+			grid-column: span 2;
+			border: 1px solid rgb(238, 238, 238);
+			background: transparent;
+			outline: none;
+			font-size: 18px;
+			margin-top: 2.5rem;
+			padding: 8px;
+			width: calc(100% - 1rem);
+			color: rgb(238, 238, 238);
+		}
+	
+		& input.small {
+			grid-column: span 1;
+		}
+	
+		& input::placeholder {
+			font-family: $font;
+			color: rgb(238, 238, 238);
+		}
+	
+		& button {
+			padding: 1rem 2rem;
+			background-color: rgb(30, 165, 117);
+			transition: background .2s ease-in-out;
+			font-size: 21.6px;
+			width: 100%;
+			grid-column: span 2;
+			color: #eee;
+			cursor: pointer;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-top: 2.5rem;
+		}
+		
+	
+		& a{
+			display:flex;
+			text-align: right;
+			font-size: .9rem;
+			margin: .5rem;
+			margin-bottom: -1rem;
+			justify-content: flex-end;
+			align-items: center;
+			text-decoration: none;
+			color: rgb(30, 165, 117);
+			grid-column: span 2;
+		}
+	}
 }
 
 .gecko_products_header {
@@ -161,69 +162,69 @@ input::placeholder {
 	&:hover {
 		box-shadow: 0 .125pc 12pt rgba(28,37,46,.1);
 	}
-}
 
-picture {
-	display: block;
-	overflow: hidden;
-}
-
-img {
-	display:block;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
-	height: auto;
-	transition: all .5s ease-in-out;
-	transform-origin: bottom center;
-
-	&:hover {
-		transform: scale(1.05);
-	}
-}
-
-.gecko_product_details{
-	background-color: #fff;
-	padding: 1.5rem 1rem;
-	display:flex;
-	flex-flow: column;
-	justify-content: center;
-	align-items: center;
-
-	& h3 {
-		color: #1c252e;
-		font-weight: bold;
-		font-size: 1.4rem;
-		text-align: center;
-		margin: 0;
-	}
-
-	& h3:hover {
-		text-decoration: underline;
-	}
+	& picture {
+		display: block;
+		overflow: hidden;
 	
-	& p {
-		text-align: center;
-		margin: 0;
-		color: #999;
-		line-height: 1.2rem;
-		font-size: .9rem;
-		margin-bottom: 1rem;
-	}
-
-	& button {
-		transition: all .1s ease-in-out;
-		box-shadow: 0 0 0 2px #1ea575;
-		color: #1ea575;
-		border-radius: .0625in;
-		font-size: 1.2rem;
-		padding: .6rem 1.5rem;
-		cursor: pointer;
-		background-color: transparent;
-
-		&:hover {
-			background-color: rgba(30,165,117,.1);
+		& img {
+			display:block;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: auto;
+			transition: all .5s ease-in-out;
+			transform-origin: bottom center;
+		
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 	}
-
+	
+	& .gecko_product_details{
+		background-color: #fff;
+		padding: 1.5rem 1rem;
+		display:flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	
+		& h3 {
+			color: #1c252e;
+			font-weight: bold;
+			font-size: 1.4rem;
+			text-align: center;
+			margin: 0;
+		}
+	
+		& h3:hover {
+			text-decoration: underline;
+		}
+		
+		& p {
+			text-align: center;
+			margin: 0;
+			color: #999;
+			line-height: 1.2rem;
+			font-size: .9rem;
+			margin-bottom: 1rem;
+		}
+	
+		& button {
+			transition: all .1s ease-in-out;
+			box-shadow: 0 0 0 2px #1ea575;
+			color: #1ea575;
+			border-radius: .0625in;
+			font-size: 1.2rem;
+			padding: .6rem 1.5rem;
+			cursor: pointer;
+			background-color: transparent;
+	
+			&:hover {
+				background-color: rgba(30,165,117,.1);
+			}
+		}
+	}
 }
+

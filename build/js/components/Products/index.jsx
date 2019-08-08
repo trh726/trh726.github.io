@@ -38,7 +38,9 @@ export default class Products extends React.PureComponent {
 					<meta name="View all our products." content="Nested component" />
 				</Helmet>
 				<h1 className="gecko_products_header">Hi, { this.props.user }! View Our Products</h1>				
-				<section className='gecko_products'>
+				<section className='gecko_products' itemScope itemType="http://schema.org/ItemList">
+				<link itemProp="url" href="https://trh726.github.io" />
+				<meta itemProp="numberOfItems" content={this.state.products.length} />
 				{this.state.products.map(product => {
 					return (
 						<Product key={product.id} 
