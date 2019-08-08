@@ -3,6 +3,11 @@
   min-height: 100%;
   margin: 2.5rem;
 }
+@media only screen and (max-width: 540px) {
+  #root {
+    margin: 1rem;
+  }
+}
 
 html, body, span, div {
   font-family: "Exo", sans-serif;
@@ -39,6 +44,11 @@ a {
   width: 34rem;
   margin: auto;
   padding: 2.5rem;
+}
+@media only screen and (max-width: 540px) {
+  .gecko_sign-up {
+    padding: 1rem;
+  }
 }
 .gecko_sign-up h1 {
   text-align: center;
@@ -90,8 +100,18 @@ a {
   width: calc(100% - 1rem);
   color: #eee;
 }
+@media only screen and (max-width: 540px) {
+  .gecko_sign-up form input {
+    margin-top: 1.5rem;
+  }
+}
 .gecko_sign-up form input.small {
   grid-column: span 1;
+}
+@media only screen and (max-width: 540px) {
+  .gecko_sign-up form input.small {
+    grid-column: span 2;
+  }
 }
 .gecko_sign-up form input::placeholder {
   font-family: "Exo", sans-serif;
